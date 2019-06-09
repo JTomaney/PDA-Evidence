@@ -21,6 +21,9 @@ Calculator.prototype = {
 
   divide: function(number){
     this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
+    if (this.runningTotal == 'Infinity') {
+      this.runningTotal = 'NaN'
+    }
   },
 
   numberClick: function(number) {
