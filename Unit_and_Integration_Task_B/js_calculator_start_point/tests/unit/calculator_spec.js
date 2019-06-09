@@ -53,11 +53,11 @@ describe('calculator', function () {
   it('can clear the running total without affecting calculation', function () {
     calculator.numberClick(5);
     calculator.operatorClick('+');
-    calculator.operatorClick('*');
-    calculator.clearClick();
     calculator.operatorClick('+');
+    calculator.operatorClick('+');
+    calculator.clearClick();
     calculator.operatorClick('=');
-    assert.equal(calculator.runningTotal, 100);
+    assert.equal(calculator.runningTotal, 20);
   })
 
 });
