@@ -12,9 +12,15 @@ describe('calculator', function () {
   })
 
   it('can add two numbers', function () {
-    calculator.previousTotal = 1;
-    calculator.add(4);
+    calculator.previousTotal = 4;
+    calculator.add(1);
     assert.equal(calculator.runningTotal, 5);
+  })
+
+  it('can subtract one number from another', function () {
+    calculator.previousTotal = 7;
+    calculator.subtract(4);
+    assert.equal(calculator.runningTotal, 3)
   })
 
 });
